@@ -68,7 +68,7 @@
 	<SDL.h>
 	"Mouse.h"
 
-1746984465 source:c:\users\hoang\onedrive\máy tính\uet\ki2namnhat\ltnc\final\nodemosdl\game.cpp
+1746985506 source:c:\users\hoang\onedrive\máy tính\uet\ki2namnhat\ltnc\final\nodemosdl\game.cpp
 	"Game.h"
 	"Graphics.h"
 
@@ -88,7 +88,7 @@
 1746864492 c:\users\hoang\onedrive\máy tính\uet\ki2namnhat\ltnc\final\nodemosdl\stat.h
 	<bits/stdc++.h>
 
-1746864465 source:c:\users\hoang\onedrive\máy tính\uet\ki2namnhat\ltnc\final\nodemosdl\stat.cpp
+1746985357 source:c:\users\hoang\onedrive\máy tính\uet\ki2namnhat\ltnc\final\nodemosdl\stat.cpp
 	"Stat.h"
 	<fstream>
 

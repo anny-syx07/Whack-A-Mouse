@@ -64,6 +64,8 @@ void Game::init() {
     sfx=graphics.renderText("Sound effect ",diem,diemm);
     mzopt=graphics.renderText("Music",diem,diemm);
     option=graphics.renderText("Retro         Mario        Bitgame",opt,{0,0,0,0});
+
+    stat.loadHighScore();
 }
 
 void Game::updateSlider(){
