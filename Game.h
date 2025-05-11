@@ -26,7 +26,7 @@ public:
     SDL_Event e;
     int newGame=true;
     bool clicked=false;
-    int spawnInterval=2000;
+    int spawnInterval=3000;
 private:
     Graphics graphics;
     SDL_Event event;

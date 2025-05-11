@@ -167,6 +167,7 @@ void Game::resetGame() {
     }
     newGame=0;
     clicked = false;
+    spawnInterval=3000;
 }
 
 
@@ -208,6 +209,10 @@ void Game::update() {
         }
 
         case State::Playing: {
+            if(stat.score>=30) spawnInterval=2000;
+            else if(stat.score>=50) spawnInterval=1500;
+            else if(stat.score>=80) spawnInterval=1000;
+            else if(stat.score>=100) spawnInterval=500;
             if(!newGame) {mouse.clear(); clicked=false;}
             graphics.renderTexture(diemmeo, 2, 50);
             graphics.renderTexture(diemchuot, 2, 10);
