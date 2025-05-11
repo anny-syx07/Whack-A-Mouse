@@ -5,13 +5,18 @@ bool dragvol=false;
 bool dragsfx=false;
 float musicvol=80;
 float sfxvol=80;
+bool muzik=false;
 
 void Game::init() {
     srand(time(0));
     graphics.init();
 
-    gMusic = graphics.loadMusic("assets/sound/retroarcadesound.mp3");
-    graphics.toggle(gMusic);
+    gMusic1 = graphics.loadMusic("assets/sound/retroarcadesound.mp3");
+    gMusic=gMusic1;
+    graphics.toggle(gMusic1);
+
+    gMusic2=graphics.loadMusic("assets/sound/mario.mp3");
+    gMusic3=graphics.loadMusic("assets/sound/bitgame.mp3");
 
     hup = graphics.loadChunk("assets/sound/hup-sound.mpga");
     meow = graphics.loadChunk("assets/sound/meow.mp3");
@@ -34,6 +39,7 @@ void Game::init() {
     cursorsfx=cursorvl;
     sets=graphics.loadTexture("assets/picture/settings.png");
     menuset=graphics.loadTexture("assets/picture/manhinhset.png");
+    tick=graphics.loadTexture("assets/picture/tick.png");
 
     for (int i = 0; i < 3; ++i) {
         anhsong[i] = graphics.loadTexture(("assets/picture/" + std::string(i == 0 ? "xamsong" : i == 1 ? "nausong" : "camsong") + ".png").c_str());
@@ -47,6 +53,7 @@ void Game::init() {
     gover = graphics.loadFont("assets/font/fluff.ttf", 80);
     diem = graphics.loadFont("assets/font/diem.ttf", 30);
     ingame = graphics.loadFont("assets/font/shortbaby.ttf", 20);
+    opt=graphics.loadFont("assets/font/fluff.ttf",20);
 
     hello = graphics.renderText("Whack a", welcome, color);
     hellodongduoi = graphics.renderText("mouse!", welcome, color);
@@ -55,6 +62,8 @@ void Game::init() {
     highscore = graphics.renderText("High score: ", diem, diemm);
     volume=graphics.renderText("Volume ",diem,diemm);
     sfx=graphics.renderText("Sound effect ",diem,diemm);
+    mzopt=graphics.renderText("Music",diem,diemm);
+    option=graphics.renderText("Retro         Mario        Bitgame",opt,{0,0,0,0});
 }
 
 void Game::updateSlider(){
@@ -74,6 +83,39 @@ void Game::updateSlider(){
     int sfxX=sfxvol*272/128;
     graphics.renderTexture(cursorsfx,std::min(342,std::max(90,90+sfxX-10)),390);
 
+}
+
+void Game::updateMusic(){
+    if(muzik){
+        if(m1.checkmouse(x,y)){
+            idx=1;
+            graphics.toggle(gMusic);
+
+            gMusic=gMusic1;
+        }
+        else if(m2.checkmouse(x,y)){
+            idx=2;
+            graphics.toggle(gMusic);
+            graphics.renderTexture(tick,250,500);
+            gMusic=gMusic2;
+        }
+        else if(m3.checkmouse(x,y)){
+            idx=3;
+            graphics.toggle(gMusic);
+            graphics.renderTexture(tick,380,500);
+            gMusic=gMusic3;
+        }
+        graphics.toggle(gMusic);
+    }
+    if(idx==1){
+        graphics.renderTexture(tick,150,500);
+    }
+    if(idx==2){
+        graphics.renderTexture(tick,250,500);
+    }
+    if(idx==3){
+        graphics.renderTexture(tick,380,500);
+    }
 }
 
 void Game::run() {
@@ -112,6 +154,9 @@ void Game::handleEvents() {
                     curState=State::StartScreen;
                 else if(vlbar.checkmouse(x,y)) dragvol=true;
                 else if(sfxbar.checkmouse(x,y)) dragsfx=true;
+                else if(m1.checkmouse(x,y)||m2.checkmouse(x,y)||m3.checkmouse(x,y)){
+                    muzik=true;
+                }
             }
 
             else if (nutInfo.checkmouse(x, y) && curState == State::StartScreen) {
@@ -154,6 +199,7 @@ void Game::handleEvents() {
         if(event.type==SDL_MOUSEBUTTONUP){
             dragvol=false;
             dragsfx=false;
+            muzik=false;
         }
     }
 }
@@ -191,6 +237,9 @@ void Game::update() {
             graphics.renderTexture(sfx,70,330);
             graphics.renderTexture(volumebar,90,280);
             graphics.renderTexture(volumebar,90,390);
+            graphics.renderTexture(mzopt,70,440);
+            graphics.renderTexture(option,70,500);
+            updateMusic();
             updateSlider();
             break;
 

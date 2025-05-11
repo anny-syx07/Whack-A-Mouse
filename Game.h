@@ -19,6 +19,7 @@ public:
     void resetGame();
     void spawnMouseIfNeeded();
     void updateSlider();
+    void updateMusic();
     bool soundEnabled = true;
     int xBasechuot[4];
     int xBasemeo[4];
@@ -27,9 +28,13 @@ public:
     int newGame=true;
     bool clicked=false;
     int spawnInterval=3000;
+    int idx=1;
 private:
     Graphics graphics;
     SDL_Event event;
+    Mix_Music *gMusic1;
+    Mix_Music *gMusic2;
+    Mix_Music *gMusic3;
     Mix_Music *gMusic;
     Mix_Chunk *hup;
     Mix_Chunk *meow;
@@ -55,11 +60,14 @@ private:
     SDL_Texture* cursorsfx;
     SDL_Texture* sets;
     SDL_Texture* menuset;
+    SDL_Texture* mzopt;
+    SDL_Texture* option;
 
 
     TTF_Font *welcome;
     TTF_Font *gover;
     TTF_Font *diem;
+    TTF_Font *opt;
 
     SDL_Color color={128,0,0,0};
     SDL_Color diemm={46,8,84,0};
@@ -73,6 +81,7 @@ private:
     SDL_Texture* volume;
     SDL_Texture* sfx;
     SDL_Texture* volumebar;
+    SDL_Texture* tick;
 
     TTF_Font *ingame;
     SDL_Color baby={255,0,0,0};
@@ -92,6 +101,9 @@ private:
     Column vlbar=Column(90,362,280,300);
     Column sfxbar=Column(90,362,390,410);
     Column nutSet=Column(400,450,10,55);
+    Column m1=Column(150,170,500,520);
+    Column m2=Column(250,270,500,520);
+    Column m3=Column(380,400,500,520);
     bool isRunning=true;
     int lastSpawnTime=0;
     SDL_Texture* anhsong[3];
