@@ -1,0 +1,94 @@
+# depslib dependency file v1.0
+1739327695 source:c:\users\hoang\onedrive\máy tính\bruhh\demosdl\main.cpp
+	<iostream>
+	<SDL.h>
+	<iostream>
+	<SDL.h>
+	<SDL_image.h>
+
+1738861952 c:\users\hoang\onedrive\máy tính\bruhh\demosdl\painter.h
+	<string>
+	<SDL.h>
+
+1744470765 source:c:\users\hoang\onedrive\máy tính\uet\ki2namnhat\ltnc\gameproject\nodemosdl\main.cpp
+	<bits/stdc++.h>
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_mixer.h>
+	<SDL_ttf.h>
+	"defs.h"
+	"Graphics.h"
+
+1743920576 c:\users\hoang\onedrive\máy tính\uet\ki2namnhat\ltnc\gameproject\nodemosdl\def.h
+
+1744092221 c:\users\hoang\onedrive\máy tính\uet\ki2namnhat\ltnc\gameproject\nodemosdl\graphics.h
+	<SDL.h>
+	<SDL_image.h>
+	"defs.h"
+	<SDL_mixer.h>
+	<SDL_ttf.h>
+
+1744092271 source:c:\users\hoang\onedrive\máy tính\uet\ki2namnhat\ltnc\gameproject\nodemosdl\graphics.cpp
+	<iostream>
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_mixer.h>
+	<SDL_ttf.h>
+	"Graphics.h"
+
+1744092183 c:\users\hoang\onedrive\máy tính\uet\ki2namnhat\ltnc\gameproject\nodemosdl\defs.h
+
+1744092271 source:c:\users\hoang\onedrive\máy tính\uet\ki2namnhat\ltnc\final\nodemosdl\graphics.cpp
+	<iostream>
+	<SDL.h>
+	<SDL_image.h>
+	<SDL_mixer.h>
+	<SDL_ttf.h>
+	"Graphics.h"
+
+1744092221 c:\users\hoang\onedrive\máy tính\uet\ki2namnhat\ltnc\final\nodemosdl\graphics.h
+	<SDL.h>
+	<SDL_image.h>
+	"defs.h"
+	<SDL_mixer.h>
+	<SDL_ttf.h>
+
+1744092183 c:\users\hoang\onedrive\máy tính\uet\ki2namnhat\ltnc\final\nodemosdl\defs.h
+
+1746474074 source:c:\users\hoang\onedrive\máy tính\uet\ki2namnhat\ltnc\final\nodemosdl\mouse.cpp
+	"Mouse.h"
+
+1746637592 c:\users\hoang\onedrive\máy tính\uet\ki2namnhat\ltnc\final\nodemosdl\mouse.h
+	<SDL.h>
+
+1746556028 source:c:\users\hoang\onedrive\máy tính\uet\ki2namnhat\ltnc\final\nodemosdl\column.cpp
+	"Column.h"
+
+1746825556 c:\users\hoang\onedrive\máy tính\uet\ki2namnhat\ltnc\final\nodemosdl\column.h
+	<SDL.h>
+	"Mouse.h"
+
+1746965707 source:c:\users\hoang\onedrive\máy tính\uet\ki2namnhat\ltnc\final\nodemosdl\game.cpp
+	"Game.h"
+	"Graphics.h"
+
+1746965726 c:\users\hoang\onedrive\máy tính\uet\ki2namnhat\ltnc\final\nodemosdl\game.h
+	<SDL.h>
+	<bits/stdc++.h>
+	"Column.h"
+	"Graphics.h"
+	"State.h"
+	"Stat.h"
+
+1746473572 source:c:\users\hoang\onedrive\máy tính\uet\ki2namnhat\ltnc\final\nodemosdl\main.cpp
+	"Game.h"
+
+1746964049 c:\users\hoang\onedrive\máy tính\uet\ki2namnhat\ltnc\final\nodemosdl\state.h
+
+1746864492 c:\users\hoang\onedrive\máy tính\uet\ki2namnhat\ltnc\final\nodemosdl\stat.h
+	<bits/stdc++.h>
+
+1746864465 source:c:\users\hoang\onedrive\máy tính\uet\ki2namnhat\ltnc\final\nodemosdl\stat.cpp
+	"Stat.h"
+	<fstream>
+
