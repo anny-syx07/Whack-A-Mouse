@@ -68,11 +68,11 @@
 	<SDL.h>
 	"Mouse.h"
 
-1746980908 source:c:\users\hoang\onedrive\máy tính\uet\ki2namnhat\ltnc\final\nodemosdl\game.cpp
+1746984465 source:c:\users\hoang\onedrive\máy tính\uet\ki2namnhat\ltnc\final\nodemosdl\game.cpp
 	"Game.h"
 	"Graphics.h"
 
-1746980936 c:\users\hoang\onedrive\máy tính\uet\ki2namnhat\ltnc\final\nodemosdl\game.h
+1746984605 c:\users\hoang\onedrive\máy tính\uet\ki2namnhat\ltnc\final\nodemosdl\game.h
 	<SDL.h>
 	<bits/stdc++.h>
 	"Column.h"

@@ -27,7 +27,7 @@ public:
     SDL_Event e;
     int newGame=true;
     bool clicked=false;
-    int spawnInterval=3000;
+    int spawnInterval=2000;
     int idx=1;
 private:
     Graphics graphics;
@@ -47,12 +47,6 @@ private:
     SDL_Texture* meodungyen;
     SDL_Texture* info;
     SDL_Texture* meodap ;
-    SDL_Texture* xamsong;
-    SDL_Texture* nausong;
-    SDL_Texture* camsong;
-    SDL_Texture* xamchet;
-    SDL_Texture* nauchet;
-    SDL_Texture* camchet;
     SDL_Texture *diemmeo;
     SDL_Texture *diemchuot;
     SDL_Texture *huongdan;
@@ -106,8 +100,8 @@ private:
     Column m3=Column(380,400,500,520);
     bool isRunning=true;
     int lastSpawnTime=0;
-    SDL_Texture* anhsong[3];
-    SDL_Texture* anhchet[3];
+    SDL_Texture* anhsong[4];
+    SDL_Texture* anhchet[4];
 
     vector<Mouse>mouse;
 };

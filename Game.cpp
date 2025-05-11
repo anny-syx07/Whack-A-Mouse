@@ -41,9 +41,9 @@ void Game::init() {
     menuset=graphics.loadTexture("assets/picture/manhinhset.png");
     tick=graphics.loadTexture("assets/picture/tick.png");
 
-    for (int i = 0; i < 3; ++i) {
-        anhsong[i] = graphics.loadTexture(("assets/picture/" + std::string(i == 0 ? "xamsong" : i == 1 ? "nausong" : "camsong") + ".png").c_str());
-        anhchet[i] = graphics.loadTexture(("assets/picture/" + std::string(i == 0 ? "xamchet" : i == 1 ? "nauchet" : "camchet") + ".png").c_str());
+    for (int i = 0; i < 4; ++i) {
+        anhsong[i] = graphics.loadTexture(("assets/picture/" + std::string(i == 0 ? "xamsong" : i == 1 ? "nausong" : i==2?"camsong":"xanh") + ".png").c_str());
+        anhchet[i] = graphics.loadTexture(("assets/picture/" + std::string(i == 0 ? "xamchet" : i == 1 ? "nauchet" : i==2?"camchet":"xanh") + ".png").c_str());
     }
 
     xBasechuot[0] = 110; xBasechuot[1] = 170; xBasechuot[2] = 250; xBasechuot[3] = 320;
@@ -258,10 +258,10 @@ void Game::update() {
         }
 
         case State::Playing: {
-            if(stat.score>=30) spawnInterval=2000;
-            else if(stat.score>=50) spawnInterval=1500;
-            else if(stat.score>=80) spawnInterval=1000;
-            else if(stat.score>=100) spawnInterval=500;
+            if(stat.score>=30) spawnInterval=1500;
+            else if(stat.score>=50) spawnInterval=1000;
+            else if(stat.score>=80) spawnInterval=500;
+            else if(stat.score>=100) spawnInterval=200;
             if(!newGame) {mouse.clear(); clicked=false;}
             graphics.renderTexture(diemmeo, 2, 50);
             graphics.renderTexture(diemchuot, 2, 10);
@@ -299,7 +299,9 @@ void Game::update() {
 
             if (SDL_GetTicks() - lastSpawnTime >= spawnInterval) {
                 int col = rand() % 4;
-                int type = rand() % 3;
+                int type;
+                if(stat.score<30) type = rand() % 3;
+                else type=rand()%4;
                 Mouse c(col, 800, type + 1, anhsong[type], anhchet[type], true, true);
                 mouse.push_back(c);
                 lastSpawnTime = SDL_GetTicks();
@@ -311,13 +313,18 @@ void Game::update() {
                 if (c.visible) {
                     c.y -= c.speed;
                     if (c.y <= 300) {
-                        c.visible = false;
-                        if (c.song) {
-                            stat.loseLife();
-                            Mix_PlayChannel(-1, meow, 0);
-                        } else {
-                            stat.addScore(c.speed);
-                            Mix_PlayChannel(-1, pop, 0);
+                        if(c.speed!=4){
+                            c.visible = false;
+                            if (c.song) {
+                                stat.loseLife();
+                                Mix_PlayChannel(-1, meow, 0);
+                            } else {
+                                stat.addScore(c.speed);
+                                Mix_PlayChannel(-1, pop, 0);
+                            }
+                        }
+                        else{
+                            curState=State::GameOver;
                         }
                     }
                 }
