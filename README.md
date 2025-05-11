@@ -37,16 +37,26 @@ g++ main.cpp -o JungleAdventure -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf
 - Build và chạy.
 
  ## 📁 Cấu trúc thư mục:
- ├── main.cpp                # Entry point
-├── game.h                 # Điều khiển toàn bộ trò chơi
-├── graphics.h             # Xử lý vẽ và texture
-├── Mouse.h                # Các thuộc tính của chuột
-├── Column.h               # Dùng để kiểm tra vị trí chuột đã click hay chưa
-├── State.h                # Trạng thái game
-├── Stat.h                 # Trạng thái điểm
-├── defs.h                 # Hằng số định nghĩa toàn cục
-├── assets/                # Hình ảnh, nhạc, âm thanh, font
-└── README.md   
+ `
+ ├── main.cpp                # Entry point `  
+ `
+├── game.h                 # Điều khiển toàn bộ trò chơi  `  
+`
+├── graphics.h             # Xử lý vẽ và texture  `  
+`
+├── Mouse.h                # Các thuộc tính của chuột  `  
+`
+├── Column.h               # Dùng để kiểm tra vị trí chuột đã click hay chưa  `  
+`
+├── State.h                # Trạng thái game  `  
+`
+├── Stat.h                 # Trạng thái điểm  `  
+`
+├── defs.h                 # Hằng số định nghĩa toàn cục  `  
+`
+├── assets/                # Hình ảnh, nhạc, âm thanh, font  `  
+`
+└── README.md   `
 
 ## 🏹Mục tiêu trò chơi:
 - Thử thách phản xạ
