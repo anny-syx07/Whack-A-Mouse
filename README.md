@@ -28,8 +28,8 @@ Chuột xanh lướt qua nhanh như chuột cam nhưng nếu đập nó thì ta 
 - Trình biên dịch C++ hỗ trợ C++17 trở lên
 ### Trên Linux:
 `sudo apt install libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev
-g++ main.cpp -o JungleAdventure -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf
-./JungleAdventure`
+g++ main.cpp -o WhackAMouse -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf
+./WhackAMouse`
 ### Trên Windows:
 - Cài đặt SDL2 và các thư viện đi kèm.
 - Dùng IDE như Visual Studio, Code::Blocks hoặc MinGW.
