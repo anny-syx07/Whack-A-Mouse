@@ -52,9 +52,9 @@ g++ main.cpp -o WhackAMouse -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf
 `
 ├── Stat.h                 # Trạng thái điểm  `  
 `
-├── defs.h                 # Hằng số định nghĩa toàn cục  `  
+├── defs.h                 # Hằng số định nghĩa toàn cục`    
 `
-├── assets/                #phím
+├── assets/                #phím`  
 - Animation (hoạt hình)
 - Xử lý va chạm
 - Score (có tính điểm)
