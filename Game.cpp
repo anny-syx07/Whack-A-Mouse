@@ -91,28 +91,26 @@ void Game::updateMusic(){
     if(muzik){
         graphics.toggle(gMusic);
         if(m1.checkmouse(x,y)){
-            idx=1;
+            graphics.renderTexture(tick,180,500);
             gMusic=gMusic1;
         }
         else if(m2.checkmouse(x,y)){
-            idx=2;
             graphics.renderTexture(tick,250,500);
             gMusic=gMusic2;
         }
         else if(m3.checkmouse(x,y)){
-            idx=3;
             graphics.renderTexture(tick,380,500);
             gMusic=gMusic3;
         }
         graphics.toggle(gMusic);
     }
-    if(idx==1){
+    if(gMusic==gMusic1){
         graphics.renderTexture(tick,150,500);
     }
-    if(idx==2){
+    if(gMusic==gMusic2){
         graphics.renderTexture(tick,250,500);
     }
-    if(idx==3){
+    if(gMusic==gMusic3){
         graphics.renderTexture(tick,380,500);
     }
 }
