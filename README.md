@@ -55,6 +55,13 @@ g++ main.cpp -o WhackAMouse -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf
 ├── defs.h                 # Hằng số định nghĩa toàn cục`    
 `
 ├── assets/                #phím`  
+## Checklist
+- Dùng các lệnh vẽ hình
+- Texture
+- Background
+- Event chuột
+- Event bàn phím
+- Background
 - Animation (hoạt hình)
 - Xử lý va chạm
 - Score (có tính điểm)
