@@ -16,9 +16,10 @@ Chuột cam có tốc độ gây choáng nhất tựa như chỉ xuất hiện t
 ![Chuột xanh](assets/picture/xanh.png)  
 Chuột xanh lướt qua nhanh như chuột cam nhưng nếu đập nó thì ta sẽ **⛔GameOver!!**
 
- ## 🕹️ Cách chơi
- - **Người dùng sử dụng chuột để click vào các ô cột có chuột xuất hiện**  
+## 🕹️ Cách chơi
+- **Người dùng sử dụng chuột để click vào các ô cột có chuột xuất hiện**  
    ![](assets/picture/board.png)
+- **Nhấn phím `Esc` hoặc click vào biểu tượng ![](assets/picture/pause.png) để tạm dừng**
 
 ## 💻 Hướng dẫn chạy & cài đặt game
 ### Yêu cầu:
@@ -53,38 +54,7 @@ g++ main.cpp -o WhackAMouse -lSDL2 -lSDL2_image -lSDL2_mixer -lSDL2_ttf
 `
 ├── defs.h                 # Hằng số định nghĩa toàn cục  `  
 `
-├── assets/                # Hình ảnh, nhạc, âm thanh, font  `  
-`
-└── README.md   `
-
-## 🏹Mục tiêu trò chơi:
-- Thử thách phản xạ
-- Âm thanh sôi động
-- Hình ảnh ngộ nghĩnh
-  
-# Phần chấm bài
-**Họ và tên: Hoàng Thị Linh Hương**  
-**MSSV: 24021509**
-**Ngưỡng điểm mong muốn: 9.5-10**
-### Nguồn tham khảo:
-- Âm thanh lấy từ: [Nguồn âm thanh](https://pixabay.com)
-- Ảnh render từ ChatGPT hoặc tự vẽ bằng paint rồi dùng một số nguồn để removebackground nếu cần thiết   
-- Code tham khảo tại:
-* [Lazyfoo](https://lazyfoo.net/tutorials/SDL/)
-* Tài liệu của cô Châu
-* Phần điều chỉnh Volume: [Slide](https://www.youtube.com/watch?v=DXO9rghj2CM&ab_channel=RyanC.Gordon%28icculus%29)
-* Ý tưởng game: Trò chơi con trong My Talking Tom
-* Font chữ: Search ttf trên google
-### Lí do để đạt ngưỡng điểm:
-- Có cải tiến game và các tính năng nhất định
-- Không phụ thuộc vào ChatGPT
-- Concept game khá độc so với các bạn khác
-- Thực sự dành tâm huyết và công sức vào game
-### Checklist
-- Dùng các lệnh vẽ hình
-- Texture
-- Background
-- Event chuột
+├── assets/                #phím
 - Animation (hoạt hình)
 - Xử lý va chạm
 - Score (có tính điểm)
