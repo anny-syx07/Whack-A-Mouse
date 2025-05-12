@@ -89,21 +89,18 @@ void Game::updateSlider(){
 
 void Game::updateMusic(){
     if(muzik){
+        graphics.toggle(gMusic);
         if(m1.checkmouse(x,y)){
             idx=1;
-            graphics.toggle(gMusic);
-
             gMusic=gMusic1;
         }
         else if(m2.checkmouse(x,y)){
             idx=2;
-            graphics.toggle(gMusic);
             graphics.renderTexture(tick,250,500);
             gMusic=gMusic2;
         }
         else if(m3.checkmouse(x,y)){
             idx=3;
-            graphics.toggle(gMusic);
             graphics.renderTexture(tick,380,500);
             gMusic=gMusic3;
         }
@@ -283,8 +280,9 @@ void Game::update() {
                             cot[i].firsttime = false;
                         }
                         for (auto& c : mouse) {
-                            if (c.song && c.col == i && c.y <= 330) {
-                                c.song = false;
+                            if (c.song && c.col == i && c.y <= 330&&c.y>=310) {
+                                c.song=false;
+                                if(c.speed==4) curState=State::GameOver;
                             }
                         }
                     } else {
@@ -315,22 +313,20 @@ void Game::update() {
                 if (c.visible) {
                     c.y -= c.speed;
                     if (c.y <= 300) {
-                        if(c.speed!=4){
-                            c.visible = false;
-                            if (c.song) {
+                        c.visible = false;
+                        if (c.song) {
+                            if(c.speed!=4){
                                 stat.loseLife();
                                 Mix_PlayChannel(-1, meow, 0);
-                            } else {
-                                stat.addScore(c.speed);
-                                Mix_PlayChannel(-1, pop, 0);
                             }
-                        }
-                        else{
-                            curState=State::GameOver;
+                        } else {
+                            stat.addScore(c.speed);
+                            Mix_PlayChannel(-1, pop, 0);
                         }
                     }
                 }
             }
+
 
             for (auto& c : mouse) {
                 if (!c.visible) continue;
