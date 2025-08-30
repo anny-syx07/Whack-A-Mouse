@@ -1,6 +1,10 @@
 #pragma once
 #include<SDL.h>
-#include<bits/stdc++.h>
+#include<iostream>
+#include<string>
+#include<vector>
+#include<algorithm>
+#include<fstream>
 #include "Column.h"
 #include "Graphics.h"
 #include "State.h"

@@ -1,6 +1,8 @@
 #ifndef STAT_H
 #define STAT_H
-#include<bits/stdc++.h>
+#include<iostream>
+#include<string>
+#include<fstream>
 using namespace std;
 class Stat{
 public:

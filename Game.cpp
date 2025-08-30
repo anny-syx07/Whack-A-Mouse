@@ -199,7 +199,7 @@ void Game::handleEvents() {
             muzik=false;
         }
         if(event.type==SDL_KEYDOWN&&curState==State::Playing){
-            if(event.key.keysym.sym=SDLK_ESCAPE){
+            if(event.key.keysym.sym==SDLK_ESCAPE){
                 curState=State::Pause;
             }
         }
